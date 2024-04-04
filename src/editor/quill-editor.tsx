@@ -396,7 +396,7 @@ export default class QuillEditor extends React.Component<
       keyboardDisplayRequiresUserAction={false}
       originWhitelist={['*']}
       style={style}
-      onError={(syntheticEvent) => {
+      onError={(syntheticEvent: any) => {
         const { nativeEvent } = syntheticEvent;
         console.warn('WebView error: ', nativeEvent);
       }}

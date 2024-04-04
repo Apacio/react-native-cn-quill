@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   WebView,
   WebViewMessageEvent,
-  WebViewErrorEvent,
   WebViewProps,
 } from 'react-native-webview';
 import {
@@ -397,7 +396,7 @@ export default class QuillEditor extends React.Component<
       keyboardDisplayRequiresUserAction={false}
       originWhitelist={['*']}
       style={style}
-      onError={(syntheticEvent: WebViewErrorEvent) => {
+      onError={(syntheticEvent: any) => {
         const { nativeEvent } = syntheticEvent;
         console.warn('WebView error: ', nativeEvent);
       }}
